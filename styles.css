@@ -1,0 +1,10 @@
+.hero-block {
+    height: 900px;
+    background-size: cover;
+    background: url(img/Ebene1.svg) 100% 100% no-repeat;
+}
+
+.body-block {
+    height: 950px;
+    background-color: #f3f1e9;
+}

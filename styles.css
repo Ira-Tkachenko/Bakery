@@ -1,7 +1,139 @@
+html, body {
+	height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
 .hero-block {
-    height: 900px;
-    background-size: cover;
-    background: url(img/Ebene1.svg) 100% 100% no-repeat;
+    background: url(./img/bakery1.png);
+    background-size: 100%;
+    width: 100%;
+}
+
+.hero-block__header {
+    display: inline-block;
+	height: 70px;
+	width: 100%;
+    background-color: rgba(86,83,76,0.5294117647058824);
+    padding-top: 35px;
+}
+
+.hero-block__header div {
+    display: inline-block;
+}
+
+.hero-block__logo {
+    margin-right: 50px;
+    margin-left: 170px;
+    font-size: 30px;
+    letter-spacing: 9px;
+    line-height: 24px;
+    color: #ffffff;
+    font-family: "Scriptina";
+    font-weight: 400;
+}
+
+.hero-block__menu {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 4px;
+    line-height: 24px;
+    color: #ffffff;
+    font-family: "Alegreya";
+    font-weight: 400;
+}
+
+.hero-block__menu div {
+    margin: 0 30px 0 30px;
+}
+
+.hero-block__menu div:hover {
+    cursor: pointer;
+}
+
+.hero-block__icons {
+    display: inline-block;
+}
+
+.hero-block__icons img {
+    margin: 0 15px 0 15px;
+    background-color: #ffffff;
+}
+
+.hero-block__main-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-content: center;
+	align-items: center;
+    height: 897px;
+    background-image: radial-gradient(circle at center, #564f4c 0%, rgba(86,83,76,0) 60%);
+}
+
+.hero-block__title {
+	height: 86px;
+	font-size: 92px;
+	letter-spacing: 7px;
+	line-height: 24px;
+	color: #ffffff;
+	font-family: "Playfair Display";
+	font-weight: 700;
+	filter: drop-shadow(0px 1px 0px #3d3029);
+	align-self: center;
+}
+
+.hero-block__title:hover {
+    cursor: pointer;
+	color: #c5c1ac;
+}
+
+.hero-block__wight-line {
+	width: 223px;
+	height: 2px;
+	background-color: #ffffff;
+}
+
+.hero-block__dashed-line {
+	height: 20px;
+	background: url(./img/dashed-line.png);
+	background-position: top center;
+}
+
+.hero-block__text {
+	width: 580px;
+	height: 69px;
+	font-size: 24px;
+	letter-spacing: 2px;
+	line-height: 36px;
+	color: #ffffff;
+	font-family: "Proxima Nova";
+	text-align: center;
+	filter: drop-shadow(0px 1px 0px #3d3029);
+}
+
+.hero-block__button {
+	display: flex;
+	justify-content: center;
+    align-content: center;
+	align-items: center;
+	margin-top: 50px;
+	width: 200px;
+	height: 50px;
+	background-color: rgba(86,83,76,0.5294117647058824);
+	border: 1px solid #9e9c93;
+	
+	font-size: 14px;
+	letter-spacing: 4px;
+	line-height: 24px;
+	color: #ffffff;
+	font-family: "Alegreya";
+	font-weight: 700;
+}
+
+.hero-block__button:hover {
+	width: 210px;
+    background-color: rgba(128, 118, 97, 0.529);
+    cursor: pointer;
 }
 
 .body-block {

@@ -4,6 +4,12 @@ html, body {
     margin: 0;
 }
 
+@media screen and (max-width: 900px) {
+    .hero-block__header div {
+        color: red;
+    }
+  }
+
 .hero-block {
     background: url(./img/bakery1.png);
     background-size: 100%;
@@ -11,20 +17,18 @@ html, body {
 }
 
 .hero-block__header {
-    display: inline-block;
 	height: 70px;
-	width: 100%;
     background-color: rgba(86,83,76,0.5294117647058824);
     padding-top: 35px;
+    padding-right: 20px;
 }
 
 .hero-block__header div {
-    display: inline-block;
+    float: left;
 }
 
 .hero-block__logo {
-    margin-right: 50px;
-    margin-left: 170px;
+    margin-left: 156px;
     font-size: 30px;
     letter-spacing: 9px;
     line-height: 24px;
@@ -34,7 +38,7 @@ html, body {
 }
 
 .hero-block__menu {
-    display: inline-block;
+    margin-left: 480px;
     font-size: 14px;
     letter-spacing: 4px;
     line-height: 24px;
@@ -44,15 +48,20 @@ html, body {
 }
 
 .hero-block__menu div {
-    margin: 0 30px 0 30px;
+    float: left;
+}
+
+.hero-block__menu div:not(:last-child)::after {
+    content: "~";
+    margin: 0 60px 0 60px;
+}
+
+.hero-block__icons {
+    margin-left: 1600px;
 }
 
 .hero-block__menu div:hover {
     cursor: pointer;
-}
-
-.hero-block__icons {
-    display: inline-block;
 }
 
 .hero-block__icons img {
@@ -70,7 +79,7 @@ html, body {
 }
 
 .hero-block__title {
-	height: 86px;
+	margin-bottom: 60px;
 	font-size: 92px;
 	letter-spacing: 7px;
 	line-height: 24px;
@@ -86,12 +95,6 @@ html, body {
 	color: #c5c1ac;
 }
 
-.hero-block__wight-line {
-	width: 223px;
-	height: 2px;
-	background-color: #ffffff;
-}
-
 .hero-block__dashed-line {
 	height: 20px;
 	background: url(./img/dashed-line.png);
@@ -100,7 +103,6 @@ html, body {
 
 .hero-block__text {
 	width: 580px;
-	height: 69px;
 	font-size: 24px;
 	letter-spacing: 2px;
 	line-height: 36px;
@@ -111,15 +113,12 @@ html, body {
 }
 
 .hero-block__button {
-	display: flex;
-	justify-content: center;
-    align-content: center;
-	align-items: center;
-	margin-top: 50px;
-	width: 200px;
+    margin-top: 50px;
+    border: 2px dashed #9e9c93;
+    padding: 10px 30px 10px 30px;
 	height: 50px;
 	background-color: rgba(86,83,76,0.5294117647058824);
-	border: 1px solid #9e9c93;
+    transition: all 0.5s;
 	
 	font-size: 14px;
 	letter-spacing: 4px;
@@ -130,9 +129,9 @@ html, body {
 }
 
 .hero-block__button:hover {
-	width: 210px;
     background-color: rgba(128, 118, 97, 0.529);
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 .body-block {

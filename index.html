@@ -9,7 +9,7 @@
     <div class="hero-block">
       <button class="hero-block__menu_button button" onclick="onClick()">Menu</button>
       <header class="hero-block__header">
-        <div class="hero-block__logo">Gustoso</div>
+        <div class="hero-block__logo logo">Gustoso</div>
         <nav class="hero-block__menu">
           <div>WELCOME</div>
           <div>MENU</div>
@@ -18,9 +18,9 @@
           <div>CONTACTS</div>
         </nav>
         <section class="hero-block__icons">
+          <img src="./img/twitter.png" alt="Twitter" width="20" height="20"/>
           <img src="./img/Facebook.png" alt="Facebook" width="20" height="20"/>
-          <img src="./img/Facebook.png" alt="Facebook" width="20" height="20"/>
-          <img src="./img/Facebook.png" alt="Facebook" width="20" height="20"/>
+          <img src="./img/inst.png" alt="Instagram" width="20" height="20"/>
         </section>
       </header>
       <main class="hero-block__main-title">
@@ -55,21 +55,51 @@
         </div>
         <div class="body-block__recipe">
           <div class="body-block__recipe-wrapper">
-            <div class="body-block__recipe-img_block"><img src="./img/placeholder.png" alt="line" width="840" height="556"/></div>
+            <img class="body-block__recipe-img_block" src="./img/placeholder.png" alt="line"/>
           </div>
           <button class="body-block__recipe_button button" onclick="onClick()">FULL RECIPE</button>
           <div class="body-block__counts">
             <div class="body-block__count_block">
-              <div></div>
-              <div></div>
-              <div></div>
+              <div class="body-block__count_block_name">PREP</div>
+              <div class="body-block__count_block_time">15</div>
+              <div class="body-block__count_block_type">mins</div>
+            </div>
+            <div class="body-block__count_block">
+              <div class="body-block__count_block_name">COOK</div>
+              <div class="body-block__count_block_time">35</div>
+              <div class="body-block__count_block_type">mins</div>
+            </div>
+            <div class="body-block__count_block">
+              <div class="body-block__count_block_name">READY IN</div>
+              <div class="body-block__count_block_time big-time">50</div>
+              <div class="body-block__count_block_type">mins</div>
             </div>
           </div>
         </div>
       </div>
     </main>
   </div>
-  <footer></footer>
+  <footer class="footer-block">
+    <div class="footer-block__menu-block">
+      <hr class="footer-block__line line-shadow">
+      <div class="footer-block__menu">
+        <div>OUR MENU</div>
+        <div>FALLERY</div>
+        <div>CULTURE</div>
+      </div>
+      <hr class="footer-block__line">
+    </div>
+    <div class="footer-block__logo logo">Gustoso</div>
+    <div class="footer-block__menu-block">
+      <hr class="footer-block__line line-shadow">
+      <div class="footer-block__menu">
+        <div>EVENTS</div>
+        <div>CATERING</div>
+        <div>VISIT US</div>
+      </div>
+      <hr class="footer-block__line">
+    </div>
+  </footer>
   <script src="script.js"></script>
  </body>
 </html>

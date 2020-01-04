@@ -17,17 +17,20 @@ html, body {
 .hero-block__header {
 	height: 70px;
     background-color: rgba(86,83,76,0.5294117647058824);
-    padding-top: 35px;
+    align-items: center;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .hero-block__logo {
+    color: #ffffff;
+}
+
+.logo {
     font-size: 30px;
     letter-spacing: 9px;
     line-height: 24px;
-    color: #ffffff;
     font-family: "Scriptina";
     font-weight: 400;
 }
@@ -41,6 +44,7 @@ html, body {
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+    margin: 0 50px 0 50px;
 }
 
 .hero-block__menu div:not(:last-child)::after {
@@ -63,7 +67,7 @@ html, body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    height: 897px;
+    height: 645px;
     background-image: radial-gradient(circle at center, #564f4c 0%, rgba(86,83,76,0) 60%);
 }
 
@@ -98,7 +102,7 @@ html, body {
 	color: #ffffff;
 	font-family: "Proxima Nova";
 	text-align: center;
-	filter: drop-shadow(0px 1px 0px #3d3029);
+	filter: drop-shadow(0 0 9px rgba(0,0,0,0.54));
 }
 
 .hero-block__button {
@@ -127,7 +131,6 @@ html, body {
 }
 
 .body-block {
-    height: 950px;
     background-color: #f3f1e9;
 }
 
@@ -139,7 +142,8 @@ html, body {
 }
 
 .body-block__title {
-    margin-top: 90px;
+    position: relative;
+    padding-top: 90px;
     font-size: 48px;
     letter-spacing: 1px;
     line-height: 30px;
@@ -147,6 +151,20 @@ html, body {
     font-family: "Alegreya";
     font-weight: 700;
     text-align: center;
+}
+
+.body-block__title::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./img/mill.png) no-repeat;
+    background-size: contain;
+    background-position: center center;
+    opacity: 0.2;
 }
 
 .body-block__second-title {
@@ -162,23 +180,19 @@ html, body {
 
 .body-block__main {
     display: flex;
-    justify-content: space-around;
 }
 
 .body-block__ingredients {
     width: 257px;
     margin-right: 140px;
-}
-
-.body-block__ingredient_block {
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .body-block__ingredient_block img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -218,18 +232,147 @@ html, body {
 
 .body-block__recipe_button {
     position: absolute;
-    bottom: 65px;
-    left: -20px;
+    bottom: 70px;
+    left: -30px;
     height: 60px;
     background-color: #ffffff;
     border: 1px dashed #dfc691;
     color: #dfc691;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-family: "Alegreya";
+    font-weight: 700;
+}
+
+.body-block__recipe_button:hover {
+    cursor: pointer;
+    background-color: #e9d7d7;
 }
 
 .body-block__recipe-img_block {
     filter: drop-shadow(0 0 9px rgba(0,0,0,0.54));
-    background-color: #ffffff;
     border: 10px solid #ffffff;
+    box-sizing: border-box;
+    width: 840px;
+    height: 556px;
+}
+
+.body-block__counts {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    filter: drop-shadow(0 0 9px rgba(0,0,0,0.54));
+}
+
+.body-block__counts div:first-of-type {
+    margin-bottom: 3px;
+}
+
+.body-block__counts > :last-child {
+    /* background: url(./img/count_back.png); */
+    /* opacity: 0.5; */
+    background-color: white;
+    opacity: 1;
+    background-size: 100%;
+    width: 100%;
+}
+
+.body-block__count_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.body-block__count_block_name {
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #a47d5e;
+    font-family: "Alegreya";
+    font-weight: 700;
+    text-align: center;
+}
+
+.body-block__count_block_time {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 48px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #56534c;
+    font-family: "Alegreya";
+    font-weight: 700;
+    text-align: center;
+}
+
+.big-time {
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: #56534c;
+    font-weight: 900;
+}
+
+.body-block__count_block_type {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #56534c;
+    font-family: "Proxima Nova";
+    text-align: center;
+}
+
+.footer-block {
+    padding-top: 110px;
+    padding-bottom: 90px;
+    height: 70px;
+    display: flex;
+    width: 100%;
+    background-color: #f3f1e9;
+    color: #262626;
+    justify-content: center;
+}
+
+.footer-block__line {
+    width: 515px;
+    border: 1px solid #c2beba;
+}
+
+.line-shadow {
+    box-shadow: 0px 26px 40px 13px #c2beba;
+}
+
+.footer-block__menu-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-block__menu {
+    display: flex;
+    width: 515px;
+    justify-content: center;
+}
+
+.footer-block__menu div:not(:last-child)::after {
+    content: "~";
+    margin: 0 40px 0 40px;
+}
+
+.footer-block__menu div:hover {
+    cursor: pointer;
+}
+
+.footer-block__logo {
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 40px 0 40px;
 }
 
 @media screen and (max-width: 1130px) {

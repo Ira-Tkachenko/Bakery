@@ -58,8 +58,15 @@ html, body {
     width: 115px;
 }
 
+.hero-block__menu div {
+    color: #ffffff;
+    transition: all 0.7s;
+}
+
 .hero-block__menu div:hover {
     cursor: pointer;
+    color: #cfbfbf;
+    transition: all 0.7s;
 }
 
 .hero-block__main-title {
@@ -81,11 +88,6 @@ html, body {
 	font-weight: 700;
 	filter: drop-shadow(0px 1px 0px #3d3029);
 	align-self: center;
-}
-
-.hero-block__title:hover {
-    cursor: pointer;
-	color: #c5c1ac;
 }
 
 .hero-block__dashed-line {
@@ -112,8 +114,7 @@ html, body {
 }
 
 .button {
-    padding: 10px 30px 10px 30px;
-    height: 50px;
+    padding: 15px 30px;
     font-size: 14px;
 	letter-spacing: 4px;
 	line-height: 24px;
@@ -234,7 +235,6 @@ html, body {
     position: absolute;
     bottom: 70px;
     left: -30px;
-    height: 60px;
     background-color: #ffffff;
     border: 1px dashed #dfc691;
     color: #dfc691;
@@ -248,6 +248,7 @@ html, body {
 .body-block__recipe_button:hover {
     cursor: pointer;
     background-color: #e9d7d7;
+    color: #fcfcfc;
 }
 
 .body-block__recipe-img_block {
@@ -343,7 +344,7 @@ html, body {
 }
 
 .line-shadow {
-    box-shadow: 0px 26px 40px 13px #c2beba;
+    box-shadow: 0px 28px 31px 7px #c2beba;
 }
 
 .footer-block__menu-block {
@@ -365,6 +366,7 @@ html, body {
 
 .footer-block__menu div:hover {
     cursor: pointer;
+    color: #a47d5e;
 }
 
 .footer-block__logo {

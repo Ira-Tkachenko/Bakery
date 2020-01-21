@@ -2,8 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bakery</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="hero-block">
@@ -11,14 +13,14 @@
       <header class="hero-block__header">
         <div class="hero-block__logo logo">Gustoso</div>
         <nav class="hero-block__menu">
-          <div>WELCOME</div>
-          <div>MENU</div>
-          <div>RESERVATIONS</div>
-          <div>NEWS</div>
-          <div>CONTACTS</div>
+          <div class="hero-block__menu-item">WELCOME</div>
+          <div class="hero-block__menu-item">MENU</div>
+          <div class="hero-block__menu-item">RESERVATIONS</div>
+          <div class="hero-block__menu-item">NEWS</div>
+          <div class="hero-block__menu-item">CONTACTS</div>
         </nav>
         <section class="hero-block__icons">
-          <img src="./img/twitter.png" alt="Twitter" width="20" height="20"/>
+          <img src="./img/twitter_svg.svg" alt="Twitter" width="20" height="20"/>
           <img src="./img/Facebook.png" alt="Facebook" width="20" height="20"/>
           <img src="./img/inst.png" alt="Instagram" width="20" height="20"/>
         </section>
@@ -83,9 +85,9 @@
     <div class="footer-block__menu-block">
       <hr class="footer-block__line line-shadow">
       <div class="footer-block__menu">
-        <div>OUR MENU</div>
-        <div>FALLERY</div>
-        <div>CULTURE</div>
+        <div class="footer-block__menu-item">OUR MENU</div>
+        <div class="footer-block__menu-item">FALLERY</div>
+        <div class="footer-block__menu-item">CULTURE</div>
       </div>
       <hr class="footer-block__line">
     </div>
@@ -93,13 +95,28 @@
     <div class="footer-block__menu-block">
       <hr class="footer-block__line line-shadow">
       <div class="footer-block__menu">
-        <div>EVENTS</div>
-        <div>CATERING</div>
-        <div>VISIT US</div>
+        <div class="footer-block__menu-item">EVENTS</div>
+        <div class="footer-block__menu-item">CATERING</div>
+        <div class="footer-block__menu-item">VISIT US</div>
       </div>
       <hr class="footer-block__line">
     </div>
   </footer>
+  <script>
+    function onResize(x) {
+      let headerElement = window.document.getElementsByClassName("hero-block__header")[0];
+      console.log(headerElement);
+      if (x.matches) {
+          headerElement.className = "hero-block__header display-none"
+      } else {
+          headerElement.className = "hero-block__header"
+      }
+    }
+
+    var x = window.matchMedia('(max-width: 1130px)')
+    onResize(x);
+    x.addListener(onResize);
+  </script>
   <script src="script.js"></script>
  </body>
 </html>
